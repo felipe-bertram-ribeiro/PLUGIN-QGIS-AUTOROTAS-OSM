@@ -1,2 +1,27 @@
+# Arquivos Python compilados
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Pastas de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários e backups
+*.bak
+*.swp
+*~
+
+# Arquivos de build ou distribuição (se usar zip ou deploy)
+build/
+dist/
+*.egg-info/
+*.zip
+
+# Arquivo de log
+*.log
+
+# Arquivos do sistema (macOS, Windows)
+.DS_Store
+Thumbs.db
