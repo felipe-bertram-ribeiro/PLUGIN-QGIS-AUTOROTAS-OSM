@@ -1,0 +1,9 @@
+[general]
+name=AutoRotasOverpass
+qgisMinimumVersion=3.0
+description=Plugin QGIS para baixar e filtrar vias OSM via Overpass API
+version=1.0.1
+author=Felipe Bertram
+email=felipebertram3014@gmail.com
+tags=osm,routes,overpass,automação
+icon=icon.svg
