@@ -1,111 +1,145 @@
-Plugin Auto Rotas OSM (Overpass) para QGIS
-Descrição
+<h1>Plugin Auto Rotas OSM (Overpass) para QGIS</h1>
 
-O Auto Rotas OSM (Overpass) é um plugin desenvolvido para o QGIS que permite realizar o download de vias (roads) do OpenStreetMap (OSM) utilizando a Overpass API. Ele possibilita filtrar os resultados com base nos tipos de rodovias e definir a área de busca por nome de localidade (ex.: “Curitiba, Brazil”) ou por extensão geográfica (coordenadas mínimas e máximas).
+<h2>Descrição</h2>
+<p>
+O <strong>Auto Rotas OSM (Overpass)</strong> é um plugin desenvolvido para o <strong>QGIS</strong> que permite realizar o download de <strong>vias (roads)</strong> do 
+<strong>OpenStreetMap (OSM)</strong> utilizando a <strong>Overpass API</strong>. 
+Ele possibilita filtrar os resultados com base nos <strong>tipos de rodovias</strong> e definir a área de busca por 
+<strong>nome de localidade</strong> (ex.: “Curitiba, Brazil”) ou por <strong>extensão geográfica</strong> 
+(coordenadas mínimas e máximas).
+</p>
 
-Após a consulta, os dados são processados e convertidos em uma camada vetorial de linhas, permitindo visualização e análise geoespacial no QGIS.
+<p>
+Após a consulta, os dados são processados e convertidos em uma <strong>camada vetorial de linhas</strong>, permitindo 
+<strong>visualização e análise geoespacial</strong> no QGIS.
+</p>
 
-O projeto foi desenvolvido com foco em eficiência, integração direta com APIs do OSM e facilidade de uso dentro do ambiente QGIS.
+<p>
+O projeto foi desenvolvido com foco em <strong>eficiência, integração direta com APIs do OSM</strong> e 
+<strong>facilidade de uso dentro do ambiente QGIS</strong>.
+</p>
 
-O projeto ainda não está concluído e virão novas adições.
-Funcionalidades
+<hr>
 
-Definir área de pesquisa
+<h2>O projeto ainda não está concluído e virão novas adições.</h2>
 
-Por Nome: Busca a área correspondente usando o serviço Nominatim (API de geocodificação do OpenStreetMap).
+<hr>
 
-Por Extensão: Define manualmente a área de interesse através das coordenadas xmin, ymin, xmax, ymax.
+<h2>Funcionalidades</h2>
+<ul>
+  <li><strong>Definir área de pesquisa</strong>
+    <ul>
+      <li><strong>Por Nome:</strong> Busca a área correspondente usando o serviço <strong>Nominatim</strong> (API de geocodificação do OpenStreetMap).</li>
+      <li><strong>Por Extensão:</strong> Define manualmente a área de interesse através das coordenadas <em>xmin, ymin, xmax, ymax</em>.</li>
+    </ul>
+  </li>
 
-Filtrar tipos de rodovia (highway)
+  <li><strong>Filtrar tipos de rodovia (highway)</strong>
+    <ul>
+      <li>Permite selecionar quais tipos de vias do OSM devem ser baixadas (ex.: <em>primary, secondary, tertiary, residential</em>).</li>
+    </ul>
+  </li>
 
-Permite selecionar quais tipos de vias do OSM devem ser baixadas (ex.: primary, secondary, tertiary, residential).
+  <li><strong>Consulta via Overpass API</strong>
+    <ul>
+      <li>Realiza requisições à <strong>Overpass API</strong> para obter as vias filtradas dentro da área especificada.</li>
+    </ul>
+  </li>
 
-Consulta via Overpass API
+  <li><strong>Criação automática de camada no QGIS</strong>
+    <ul>
+      <li>Gera uma camada vetorial de linhas contendo os atributos:</li>
+      <ul>
+        <li><strong>ID do OSM</strong></li>
+        <li><strong>Tipo de rodovia (highway)</strong></li>
+      </ul>
+      <li>Os dados são processados automaticamente e adicionados ao painel de camadas do QGIS.</li>
+    </ul>
+  </li>
+</ul>
 
-Realiza requisições à Overpass API para obter as vias filtradas dentro da área especificada.
+<hr>
 
-Criação automática de camada no QGIS
+<h2>Parâmetros de Entrada</h2>
+<ul>
+  <li><strong>Seleção de Área:</strong>
+    <ul>
+      <li><em>Por Nome:</em> Nome do local (ex.: “Curitiba, Brazil”).</li>
+      <li><em>Por Extensão:</em> Coordenadas retangulares (<em>xmin, ymin, xmax, ymax</em>).</li>
+    </ul>
+  </li>
 
-Gera uma camada vetorial de linhas contendo os atributos:
+  <li><strong>Tipos de Rodovia (Highway):</strong>
+    <ul>
+      <li>Lista de tipos de vias a serem filtradas (ex.: <em>primary, secondary, residential</em>).</li>
+    </ul>
+  </li>
 
-ID do OSM
+  <li><strong>Saída:</strong>
+    <ul>
+      <li>Camada de linhas com as rodovias filtradas exibidas diretamente no QGIS.</li>
+    </ul>
+  </li>
+</ul>
 
-Tipo de rodovia (highway)
+<hr>
 
-Os dados são processados automaticamente e adicionados ao painel de camadas do QGIS.
+<h2>Como Usar</h2>
 
-Parâmetros de Entrada
+<h3>Instalação</h3>
+<ol>
+  <li>Abra o <strong>QGIS</strong>.</li>
+  <li>Acesse o <strong>Gerenciador de Plugins</strong>.</li>
+  <li>Busque por <strong>Auto Rotas OSM (Overpass)</strong>.</li>
+  <li>Clique em <strong>Instalar</strong>.</li>
+</ol>
 
-Seleção de Área:
+<h3>Execução</h3>
+<ol>
+  <li>Vá até o <strong>Menu de Processamento</strong> no QGIS.</li>
+  <li>Pesquise por <strong>Auto Rotas OSM (Overpass)</strong>.</li>
+  <li>Escolha o método de definição da área (por nome ou por extensão).</li>
+  <li>Informe os tipos de rodovia que deseja filtrar.</li>
+  <li>Execute o algoritmo.</li>
+  <li>Visualize a camada resultante diretamente no mapa.</li>
+</ol>
 
-Por Nome: Nome do local (ex.: “Curitiba, Brazil”).
+<hr>
 
-Por Extensão: Coordenadas retangulares (xmin, ymin, xmax, ymax).
+<h2>Exemplo de Uso</h2>
+<ul>
+  <li><strong>Área:</strong> “Curitiba, Brazil”</li>
+  <li><strong>Tipos de rodovia:</strong> <em>primary, secondary, residential</em></li>
+</ul>
 
-Tipos de Rodovia (Highway):
+<p>
+O plugin buscará essas vias na área delimitada e criará uma camada vetorial contendo as rodovias filtradas, prontas para 
+visualização e análise no QGIS.
+</p>
 
-Lista de tipos de vias a serem filtradas (ex.: primary, secondary, residential).
+<hr>
 
-Saída:
+<h2>Tecnologias Utilizadas</h2>
+<ul>
+  <li><strong>QGIS</strong> (versão 3.22.4 ou superior)</li>
+  <li><strong>Python 3</strong></li>
+  <li><strong>PyQGIS API</strong></li>
+  <li><strong>Overpass API</strong></li>
+  <li><strong>Nominatim API (OpenStreetMap)</strong></li>
+</ul>
 
-Camada de linhas com as rodovias filtradas exibidas diretamente no QGIS.
+<hr>
 
-Como Usar
-Instalação
+<h2>Estrutura do Projeto</h2>
+<ul>
+  <li><strong>auto_rotas_osm/</strong> – Código-fonte principal do plugin.</li>
+  <li><strong>resources/</strong> – Arquivos de interface (ícones, QML, etc).</li>
+  <li><strong>metadata.txt</strong> – Informações do plugin para o QGIS.</li>
+  <li><strong>__init__.py</strong> – Arquivo de inicialização do plugin.</li>
+  <li><strong>main.py</strong> – Arquivo principal com a lógica de execução do algoritmo.</li>
+</ul>
 
-Abra o QGIS.
+<hr>
 
-Acesse o Gerenciador de Plugins.
-
-Busque por Auto Rotas OSM (Overpass).
-
-Clique em Instalar.
-
-Execução
-
-Vá até o Menu de Processamento no QGIS.
-
-Pesquise por Auto Rotas OSM (Overpass).
-
-Escolha o método de definição da área (por nome ou por extensão).
-
-Informe os tipos de rodovia que deseja filtrar.
-
-Execute o algoritmo.
-
-Visualize a camada resultante diretamente no mapa.
-
-Exemplo de Uso
-
-Área: “Curitiba, Brazil”
-
-Tipos de rodovia: primary, secondary, residential
-
-O plugin buscará essas vias na área delimitada e criará uma camada vetorial contendo as rodovias filtradas, prontas para visualização e análise no QGIS.
-
-Tecnologias Utilizadas
-
-QGIS (versão 3.22.4 ou superior)
-
-Python 3
-
-PyQGIS API
-
-Overpass API
-
-Nominatim API (OpenStreetMap)
-
-Estrutura do Projeto
-
-auto_rotas_osm/ – Código-fonte principal do plugin.
-
-resources/ – Arquivos de interface (ícones, QML, etc).
-
-metadata.txt – Informações do plugin para o QGIS.
-
-init.py – Arquivo de inicialização do plugin.
-
-main.py – Arquivo principal com a lógica de execução do algoritmo.
-
-AUTOR: FELIPE BERTRAM RIBEIRO
-EMAIL PARA CONTATO: felipebertram3014@gmail.com
+<p><strong>AUTOR:</strong> FELIPE BERTRAM RIBEIRO<br>
+<strong>EMAIL PARA CONTATO:</strong> <a href="mailto:felipebertram3014@gmail.com">felipebertram3014@gmail.com</a></p>
