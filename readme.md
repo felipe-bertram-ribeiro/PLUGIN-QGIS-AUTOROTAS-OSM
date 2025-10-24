@@ -1,38 +1,30 @@
-AUTOR: FELIPE BERTRAM RIBEIRO
-EMAIL PARA CONTATO: felipebertram3014@gmail.com
-
 Plugin Auto Rotas OSM (Overpass) para QGIS
 Descrição
 
-O Auto Rotas OSM (Overpass) é um plugin desenvolvido para o QGIS que permite realizar o download de dados de vias (roads) do OpenStreetMap (OSM) por meio da Overpass API, possibilitando o filtro dos resultados com base nos tipos de rodovias.
+O Auto Rotas OSM (Overpass) é um plugin desenvolvido para o QGIS que permite realizar o download de vias (roads) do OpenStreetMap (OSM) utilizando a Overpass API. Ele possibilita filtrar os resultados com base nos tipos de rodovias e definir a área de busca por nome de localidade (ex.: “Curitiba, Brazil”) ou por extensão geográfica (coordenadas mínimas e máximas).
 
-O plugin oferece duas formas de definir a área de busca:
-
-Por nome de localidade (ex.: “Curitiba, Brazil”);
-
-Por extensão geográfica (coordenadas mínimas e máximas).
-
-Após a consulta, os dados são processados e convertidos em uma camada vetorial de linhas no QGIS, permitindo visualização e análise geoespacial dos tipos de vias desejadas.
+Após a consulta, os dados são processados e convertidos em uma camada vetorial de linhas, permitindo visualização e análise geoespacial no QGIS.
 
 O projeto foi desenvolvido com foco em eficiência, integração direta com APIs do OSM e facilidade de uso dentro do ambiente QGIS.
 
+O projeto ainda não está concluído e virão novas adições.
 Funcionalidades
 
-Definição da área de busca
+Definir área de pesquisa
 
 Por Nome: Busca a área correspondente usando o serviço Nominatim (API de geocodificação do OpenStreetMap).
 
 Por Extensão: Define manualmente a área de interesse através das coordenadas xmin, ymin, xmax, ymax.
 
-Filtragem de tipos de rodovias (highway):
+Filtrar tipos de rodovia (highway)
 
 Permite selecionar quais tipos de vias do OSM devem ser baixadas (ex.: primary, secondary, tertiary, residential).
 
-Consulta via Overpass API:
+Consulta via Overpass API
 
 Realiza requisições à Overpass API para obter as vias filtradas dentro da área especificada.
 
-Criação automática de camada no QGIS:
+Criação automática de camada no QGIS
 
 Gera uma camada vetorial de linhas contendo os atributos:
 
@@ -89,7 +81,7 @@ Exemplo de Uso
 
 Tipos de rodovia: primary, secondary, residential
 
-O plugin irá buscar apenas esses tipos de vias dentro da área delimitada de Curitiba e criar uma camada vetorial contendo as respectivas rodovias, prontas para visualização e análise no QGIS.
+O plugin buscará essas vias na área delimitada e criará uma camada vetorial contendo as rodovias filtradas, prontas para visualização e análise no QGIS.
 
 Tecnologias Utilizadas
 
@@ -115,4 +107,5 @@ init.py – Arquivo de inicialização do plugin.
 
 main.py – Arquivo principal com a lógica de execução do algoritmo.
 
-O projeto ainda está em desenvolvimento e poderá receber novas funcionalidades e melhorias de desempenho em versões futuras.
+AUTOR: FELIPE BERTRAM RIBEIRO
+EMAIL PARA CONTATO: felipebertram3014@gmail.com
